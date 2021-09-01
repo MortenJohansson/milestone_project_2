@@ -1,0 +1,67 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/img/chris-lawton-duQ1ulzTJbM-unsplash.jpg) no-repeat fixed
+      center/cover;
+
+  display: grid;
+  grid-template-rows: auto auto 25%;
+
+  &__inner {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include breakpoint-down(small) {
+      margin: 0 10px;
+    }
+  }
+
+  &__logo {
+    height: 150px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__text {
+    font-family: $headingFont;
+    font-size: 60px;
+
+    @include breakpoint-down(small) {
+      font-size: 32px;
+    }
+  }
+
+  &__scroller {
+    grid-row: 3;
+    height: 100px;
+    width: 50px;
+    margin: auto;
+  }
+
+  &__mouse {
+    height: 100%;
+    width: 100%;
+    border: 5px solid;
+    border-radius: 35px;
+    position: relative;
+    animation: mouseAnimation 1s infinite alternate;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: white;
+    animation: ballAnimation 1.5s linear infinite;
+  }
+}
