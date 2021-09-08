@@ -35,14 +35,14 @@
     height: 12px;
     border-radius: 6px;
     opacity: 1;
-    top: 70px;
+    top: 40px;
   }
   100% {
     width: 8px;
     height: 8px;
     border-radius: 4px;
     opacity: 0;
-    top: 70px;
+    top: 40px;
   }
 }
 
@@ -59,14 +59,14 @@
     height: 12px;
     border-radius: 6px;
     opacity: 1;
-    top: 70px;
+    top: 40px;
   }
   100% {
     width: 8px;
     height: 8px;
     border-radius: 4px;
     opacity: 0;
-    top: 70px;
+    top: 40px;
   }
 }
 
@@ -118,6 +118,12 @@ body {
   }
 }
 
+@media (min-width: 40em) {
+  .hero__inner {
+    margin: 0 10px;
+  }
+}
+
 .hero__logo {
   height: 150px;
   width: 150px;
@@ -127,20 +133,20 @@ body {
 
 .hero__text {
   font-family: "Dancing Script", cursive;
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 @media (max-width: 39.9375em) {
   .hero__text {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
 .hero__scroller {
   -ms-grid-row: 3;
   grid-row: 3;
-  height: 100px;
-  width: 50px;
+  height: 70px;
+  width: 35px;
   margin: auto;
 }
 
@@ -152,6 +158,24 @@ body {
   position: relative;
   -webkit-animation: mouseAnimation 1s infinite alternate;
           animation: mouseAnimation 1s infinite alternate;
+}
+
+@media (max-width: 39.9375em) {
+  .hero__mouse {
+    border: 3px solid;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__mouse {
+    top: 5.25rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .hero__mouse {
+    top: 1.25rem;
+  }
 }
 
 .hero__arrow {

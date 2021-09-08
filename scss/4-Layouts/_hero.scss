@@ -20,6 +20,9 @@
     @include breakpoint-down(small) {
       margin: 0 10px;
     }
+    @include breakpoint-up(medium) {
+      margin: 0 10px;
+    }
   }
 
   &__logo {
@@ -31,17 +34,17 @@
 
   &__text {
     font-family: $headingFont;
-    font-size: 60px;
+    font-size: rem(60);
 
     @include breakpoint-down(small) {
-      font-size: 32px;
+      font-size: rem(32);
     }
   }
 
   &__scroller {
     grid-row: 3;
-    height: 100px;
-    width: 50px;
+    height: 70px;
+    width: 35px;
     margin: auto;
   }
 
@@ -52,6 +55,18 @@
     border-radius: 35px;
     position: relative;
     animation: mouseAnimation 1s infinite alternate;
+
+    @include breakpoint-down(small) {
+      border: 3px solid;
+    }
+
+    @include breakpoint-up(large) {
+      top: rem(84);
+    }
+
+    @include breakpoint-up(xlarge) {
+      top: rem(20);
+    }
   }
 
   &__arrow {
