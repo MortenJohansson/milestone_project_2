@@ -28,23 +28,33 @@
       </div>
     </section>
     <section class="destinations">
-      <h2 class="destinations__title">Some Text</h2>
+      <h2 class="destinations__title">Destinations</h2>
       <div class="destinations__selectors">
-        <label for="locations"></label>
-        <select name="locations" id="locations">
-          <option value="" disabled selected>Choose your location:</option>
-          <option value="countries">Countries</option>
-        </select>
-        <label for="filter"></label>
-        <select name="filter" id="filter">
-          <option value="" disabled selected>Filter:</option>
-          <option value="filter1">Filters</option>
-        </select>
-        <label for="distance"></label>
-        <select name="distance" id="distance">
-          <option value="" disabled selected>Distance:</option>
-          <option value="distance1">0 - 50 KM</option>
-        </select>
+        <div class="destinations__location">
+          <label for="locations"></label>
+          <select
+            name="locations"
+            id="locations"
+            class="destinations__selector"
+          >
+            <option value="" disabled selected>Choose your location:</option>
+            <option value="countries">Countries</option>
+          </select>
+        </div>
+        <div class="destinations__filter">
+          <label for="filter"></label>
+          <select name="filter" id="filter" class="destinations__selector">
+            <option value="" disabled selected>Filter:</option>
+            <option value="filter1">Filters</option>
+          </select>
+        </div>
+        <div class="destinations__distance">
+          <label for="distance"></label>
+          <select name="distance" id="distance" class="destinations__selector">
+            <option value="" disabled selected>Distance:</option>
+            <option value="distance1">0 - 50 KM</option>
+          </select>
+        </div>
       </div>
     </section>
     <section class="test">

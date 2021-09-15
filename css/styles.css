@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @-webkit-keyframes mouseAnimation {
   0% {
     border-color: #fafafa;
@@ -164,5 +165,71 @@ body {
   background: white;
   -webkit-animation: ballAnimation 1.5s linear infinite;
           animation: ballAnimation 1.5s linear infinite;
+}
+
+.destinations__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  margin: 10px;
+}
+
+.destinations__selectors {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin: 10px;
+}
+
+.destinations__selector {
+  height: 50px;
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  border-radius: 25px;
+  outline: none;
+}
+
+.destinations__location {
+  width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.destinations__location #locations {
+  width: 100%;
+}
+
+.destinations__filter {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.destinations__filter #filter {
+  width: 100%;
+}
+
+.destinations__distance {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.destinations__distance #distance {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
