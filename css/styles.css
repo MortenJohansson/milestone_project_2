@@ -185,6 +185,7 @@ body {
 }
 
 .destinations__selector {
+  -webkit-appearance: none;
   height: 50px;
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
