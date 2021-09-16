@@ -3,6 +3,10 @@
     font-family: $primaryFont;
     font-size: rem(32);
     margin: 10px;
+
+    @include breakpoint-up(xlarge) {
+      margin: 10px 240px;
+    }
   }
 
   &__selectors {
@@ -11,6 +15,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin: 10px;
+
+    @include breakpoint-up(medium) {
+      grid-gap: 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      width: 33%;
+      margin: 10px 240px;
+    }
   }
 
   &__selector {
@@ -23,6 +38,10 @@
     border-radius: 25px;
 
     outline: none;
+
+    @include breakpoint-up(medium) {
+      padding-right: 10px;
+    }
   }
 
   &__location {
@@ -36,6 +55,7 @@
   }
 
   &__filter {
+    width: 100%;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
@@ -45,6 +65,7 @@
   }
 
   &__distance {
+    width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
