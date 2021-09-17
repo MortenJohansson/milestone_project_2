@@ -1,0 +1,12 @@
+.maps {
+  margin: 10px;
+
+  @include breakpoint-up(xlarge) {
+    margin: 10px 240px;
+  }
+  &__div {
+    height: 75vh;
+    background-color: gray;
+    border-radius: 15px;
+  }
+}

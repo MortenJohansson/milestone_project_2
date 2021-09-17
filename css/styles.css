@@ -296,4 +296,20 @@ body {
 .destinations__distance #distance {
   width: 100%;
 }
+
+.maps {
+  margin: 10px;
+}
+
+@media screen and (min-width: 90em) {
+  .maps {
+    margin: 10px 240px;
+  }
+}
+
+.maps__div {
+  height: 75vh;
+  background-color: gray;
+  border-radius: 15px;
+}
 /*# sourceMappingURL=styles.css.map */
