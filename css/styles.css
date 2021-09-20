@@ -246,6 +246,7 @@ body {
   font-family: "Roboto", sans-serif;
   padding-left: 10px;
   border-radius: 25px;
+  border: 2px solid gray;
   outline: none;
 }
 
@@ -267,6 +268,26 @@ body {
 
 .destinations__location #locations {
   width: 100%;
+}
+
+.destinations__location #locations::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.destinations__location #locations:-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.destinations__location #locations::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.destinations__location #locations::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .destinations__filter {

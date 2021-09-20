@@ -36,6 +36,7 @@
     padding-left: 10px;
 
     border-radius: 25px;
+    border: 2px solid gray;
 
     outline: none;
 
@@ -51,6 +52,11 @@
 
     #locations {
       width: 100%;
+
+      &::placeholder {
+        color: black;
+        opacity: 1;
+      }
     }
   }
 
