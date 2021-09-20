@@ -312,4 +312,9 @@ body {
   background-color: gray;
   border-radius: 15px;
 }
+
+.footer {
+  height: 150px;
+  background-color: black;
+}
 /*# sourceMappingURL=styles.css.map */

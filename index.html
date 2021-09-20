@@ -11,6 +11,10 @@
     ></script>
     <!-- source for script defer https://flaviocopes.com/javascript-async-defer/ -->
     <script defer src="js/app.js"></script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCj0O580VqySPElJ0-M6HYyx76L4XGBpk&callback=initMap"
+    ></script>
     <title>Travel Information Site</title>
   </head>
   <body>
@@ -73,7 +77,7 @@
     </section>
     <section class="maps">
       <h2 class="maps__title">Map</h2>
-      <div class="maps__div"></div>
+      <div class="maps__div" id="map"></div>
     </section>
     <footer class="footer"></footer>
   </body>
