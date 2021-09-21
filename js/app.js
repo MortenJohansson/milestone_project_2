@@ -1,28 +1,61 @@
 // Google maps
 function initMap() {
-  let location = {
-    lat: -50.606704,
-    lng: 165.972467,
-  };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -50.606704, lng: 165.972467 },
+    zoom: 13,
+  });
 
-  let options = {
-    center: location,
-    zoom: 15,
-  };
+  const input = document.getElementById("locations");
+  const searchBox = new google.maps.places.SearchBox(input);
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (loc) => {
-        location.lat = loc.coords.latitude;
-        location.lng = loc.coords.longitude;
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
+  });
 
-        map = new google.maps.Map(document.getElementById("map"), options);
-      },
-      (err) => {
-        map = new google.maps.Map(document.getElementById("map"), options);
+  let markers = [];
+
+  searchBox.addListener("places_changed", () => {
+    const places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+
+    const bounds = new google.maps.LatLngBounds();
+
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("Returned place contains no geometry");
+        return;
       }
-    );
-  } else {
-    map = new google.maps.Map(document.getElementById("map"), options);
-  }
+
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+        })
+      );
+      if (place.geometry.viewport) {
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+  });
 }

@@ -234,7 +234,6 @@ body {
 
 @media screen and (min-width: 90em) {
   .destinations__selectors {
-    width: 33%;
     margin: 10px 240px;
   }
 }
