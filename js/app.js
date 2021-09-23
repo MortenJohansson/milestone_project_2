@@ -2,9 +2,10 @@
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -50.606704, lng: 165.972467 },
-    zoom: 13,
+    zoom: 8,
   });
 
+  // Create searchbar
   const input = document.getElementById("locations");
   const searchBox = new google.maps.places.SearchBox(input);
 

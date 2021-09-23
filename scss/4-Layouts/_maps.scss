@@ -1,12 +1,15 @@
 .maps {
-  margin: 10px;
-
-  @include breakpoint-up(xlarge) {
-    margin: 10px 240px;
+  // Map div
+  &__title {
+    font-family: $primaryFont;
+    font-size: rem(32);
   }
   &__div {
     height: 75vh;
-    background-color: gray;
     border-radius: 15px;
+
+    @include breakpoint-up(xlarge) {
+      width: 50vw;
+    }
   }
 }

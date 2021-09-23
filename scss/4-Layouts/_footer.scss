@@ -1,4 +1,14 @@
+// Footer styling
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 150px;
   background-color: black;
+
+  &__title {
+    color: white;
+    font-family: $primaryFont;
+    font-size: rem(16);
+  }
 }

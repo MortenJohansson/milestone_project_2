@@ -83,40 +83,8 @@ body {
           box-sizing: inherit;
 }
 
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  margin: 10px;
-}
-
-@media screen and (min-width: 90em) {
-  .cards {
-    margin: 60px 240px;
-  }
-}
-
-.cards__card {
-  width: 100%;
-  height: 100%;
-  background-color: gray;
-  border-radius: 15px;
-}
-
-.cards__img {
-  width: 100%;
-  height: 125px;
-  background: black;
-  border-radius: 15px 15px 0 0;
-}
-
-.cards__info {
-  padding: 0 5px;
-}
-
 .hero {
-  height: 100vh;
+  height: 75vh;
   width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/chris-lawton-duQ1ulzTJbM-unsplash.jpg") no-repeat fixed center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/chris-lawton-duQ1ulzTJbM-unsplash.jpg") no-repeat fixed center/cover;
@@ -186,7 +154,7 @@ body {
   }
 }
 
-.hero__arrow {
+.hero__ball {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -199,47 +167,28 @@ body {
           animation: ballAnimation 1.5s linear infinite;
 }
 
-.destinations__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+.destinations {
   margin: 10px;
 }
 
 @media screen and (min-width: 90em) {
-  .destinations__title {
-    margin: 10px 240px;
-  }
-}
-
-.destinations__selectors {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  margin: 10px;
-}
-
-@media screen and (min-width: 40em) {
-  .destinations__selectors {
-    grid-gap: 0;
+  .destinations {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 10px;
-  }
-}
-
-@media screen and (min-width: 90em) {
-  .destinations__selectors {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin: 10px 240px;
   }
 }
 
+.destinations__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
 .destinations__selector {
-  -webkit-appearance: none;
   height: 50px;
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
@@ -253,16 +202,6 @@ body {
   .destinations__selector {
     padding-right: 10px;
   }
-}
-
-.destinations__location {
-  width: 100%;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
 }
 
 .destinations__location #locations {
@@ -289,52 +228,39 @@ body {
   opacity: 1;
 }
 
-.destinations__filter {
-  width: 100%;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-}
-
-.destinations__filter #filter {
-  width: 100%;
-}
-
-.destinations__distance {
-  width: 100%;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-}
-
-.destinations__distance #distance {
-  width: 100%;
-}
-
-.maps {
-  margin: 10px;
-}
-
-@media screen and (min-width: 90em) {
-  .maps {
-    margin: 10px 240px;
-  }
+.maps__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
 }
 
 .maps__div {
   height: 75vh;
-  background-color: gray;
   border-radius: 15px;
 }
 
+@media screen and (min-width: 90em) {
+  .maps__div {
+    width: 50vw;
+  }
+}
+
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 150px;
   background-color: black;
+}
+
+.footer__title {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

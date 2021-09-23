@@ -15,9 +15,10 @@
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCj0O580VqySPElJ0-M6HYyx76L4XGBpk&libraries=places&callback=initMap"
     ></script>
-    <title>Travel Information Site</title>
+    <title>Map search site</title>
   </head>
   <body>
+    <!-- Hero section -->
     <section class="hero">
       <div class="hero__inner">
         <img src="img/travel.svg" alt="logo" class="hero__logo" />
@@ -27,56 +28,34 @@
       </div>
       <div class="hero__scroller">
         <div class="hero__mouse">
-          <div class="hero__arrow"></div>
+          <div class="hero__ball"></div>
         </div>
       </div>
     </section>
+    <!-- Destination section -->
     <section class="destinations">
-      <h2 class="destinations__title">Destinations</h2>
-      <div class="destinations__selectors">
-        <div class="destinations__location">
-          <label for="locations"></label>
-          <input
-            type="text"
-            id="locations"
-            class="destinations__selector"
-            placeholder="Search for a location"
-          />
-        </div>
-        <div class="destinations__filter">
-          <label for="filter"></label>
-          <select name="filter" id="filter" class="destinations__selector">
-            <option value="" disabled selected>Filter:</option>
-            <option value="filter1">Filters</option>
-          </select>
-        </div>
-        <div class="destinations__distance">
-          <label for="distance"></label>
-          <select name="distance" id="distance" class="destinations__selector">
-            <option value="" disabled selected>Distance:</option>
-            <option value="distance1">0 - 50 KM</option>
-          </select>
-        </div>
-      </div>
-      <div class="cardSection">
-        <div class="cards">
-          <div class="cards__card">
-            <div class="cards__img"></div>
-            <div class="cards__info">
-              <h2>Info title</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                odio nostrum iste saepe voluptates nulla.
-              </p>
-            </div>
+      <div class="searchbar">
+        <h2 class="destinations__title">Destinations</h2>
+        <div class="destinations__selectors">
+          <div class="destinations__location">
+            <!-- Searchbar -->
+            <label for="locations"></label>
+            <input
+              type="text"
+              id="locations"
+              class="destinations__selector"
+              placeholder="Search for a location"
+            />
           </div>
         </div>
       </div>
+      <div class="maps">
+        <h2 class="maps__title">Map</h2>
+        <div class="maps__div" id="map"></div>
+      </div>
     </section>
-    <section class="maps">
-      <h2 class="maps__title">Map</h2>
-      <div class="maps__div" id="map"></div>
-    </section>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <h3 class="footer__title">copyright 2021</h3>
+    </footer>
   </body>
 </html>

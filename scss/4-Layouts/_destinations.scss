@@ -1,34 +1,18 @@
 .destinations {
+  // Map section
+  margin: 10px;
+  @include breakpoint-up(xlarge) {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 240px;
+  }
+  // Destination title
   &__title {
     font-family: $primaryFont;
     font-size: rem(32);
-    margin: 10px;
-
-    @include breakpoint-up(xlarge) {
-      margin: 10px 240px;
-    }
   }
-
-  &__selectors {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin: 10px;
-
-    @include breakpoint-up(medium) {
-      grid-gap: 0;
-      display: flex;
-      gap: 10px;
-    }
-
-    @include breakpoint-up(xlarge) {
-      margin: 10px 240px;
-    }
-  }
-
+  // Searchbar
   &__selector {
-    -webkit-appearance: none;
     height: 50px;
     font-size: rem(20);
     font-family: $primaryFont;
@@ -45,10 +29,6 @@
   }
 
   &__location {
-    width: 100%;
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-
     #locations {
       width: 100%;
 
@@ -56,26 +36,6 @@
         color: black;
         opacity: 1;
       }
-    }
-  }
-
-  &__filter {
-    width: 100%;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-
-    #filter {
-      width: 100%;
-    }
-  }
-
-  &__distance {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    #distance {
-      width: 100%;
     }
   }
 }
